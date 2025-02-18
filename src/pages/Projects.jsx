@@ -5,7 +5,7 @@ import image5 from "../images/form application.png"
 
 const Projects = () => {
 
-  return <section className="h-screen w-full gap-8 flex-col flex bg-black">
+  return <section className="h-screen w-full gap-8 flex-col flex bg-black ">
     <div className="w-full flex justify-center">
       <div className="text-white text-2xl pt-2 ">PROJECTS</div>
     </div>
@@ -14,7 +14,7 @@ const Projects = () => {
     <div className="flex justify-center w-3/4 p-2">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 ">
         <div className="border h-[400px] w-full " style={{background:"#15191E"}}>
-        <img className="h-2/3 w-full  p-3 object-contain slika2" src={image2} alt="" />
+        <img className="h-2/3 w-full  p-3 object-contain " src={image2} alt="" />
         <div className="flex-col flex  text white w-full gap-1 ">
         <div className="text-white  font-bold pt-2  pl-1">GRICSTOP</div>
         <div className="text-white pl-1 text-sm ">Gric Stop is a popular fast food restaurant in Bosnia and Herzegovina, specializing in delicious doners.</div>

@@ -3,7 +3,7 @@ import img1 from "../images/bez pozadine.png"
 
 const About = () => {
 
-  return <section id="about" className="h-screen w-full gap-4 flex-col flex bg-black">
+  return <section id="about" className="h-screen w-full gap-4 flex-col flex pt-5" style={{background:"#15191E"}}>
     <div className="h-1/4 w-full">
     <div className="flex justify-center w-full h-full items-center pt-20">
     <div class="w-44 h-44 rounded-full  ">

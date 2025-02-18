@@ -15,8 +15,8 @@ import Other from "./Other";
 const Home = () => {
 
   return  <>
-  <section  className="h-screen w-full  bg-black text-white  flex border-b-2 ">
-    <div  className="w-1/6 h-full  border-r border-gray-400 flex-col flex "  >
+  <section  className="h-screen w-full  bg-black text-white  flex  ">
+    <div  className="w-1/6 h-full border-r  border-gray-400 flex-col flex  "  >
    <h1 className="text-white text-5xl h-1/6 w-full flex pl-20 pt-14 font-thin  ">Anel</h1>
    <div className="h-1/2 w-full flex-col gap-6 pt-8" >
    <div className="flex  items-center h-10  pl-20 text-sm font-bold cursor-pointer ">HOME</div>

@@ -56,6 +56,15 @@ opacity: 1;
   
   
 }
+.container{
+  display: grid;
+  height:100%;
+  width: 100%;
+  grid-template-columns: repeat(3,1fr);
+ 
+  
+}
+
 
 
 
