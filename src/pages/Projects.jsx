@@ -2,16 +2,20 @@ import image2 from "../images/gricstop1.png"
 import image3 from "../images/Screenshot 2024-10-05 at 20.18.25.png"
 import image4 from "../images/portfolio.png"
 import image5 from "../images/form application.png"
+import {motion} from "framer-motion"
 
 const Projects = () => {
 
-  return <section className="h-screen w-full gap-8 flex-col flex bg-black ">
+  return <section id="projects" className="h-screen w-full gap-8 flex-col flex bg-black ">
     <div className="w-full flex justify-center">
       <div className="text-white text-2xl pt-2 ">PROJECTS</div>
     </div>
     <div className="text-white w-full flex justify-center">All</div>
     <div className="h-full w-full gap-4 flex justify-center   ">
-    <div className="flex justify-center w-3/4 p-2">
+    <motion.div
+     initial={{opacity:0, }}
+     whileInView={{opacity:1}}
+     transition={{duration:4}} className="flex justify-center w-3/4 p-2">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 ">
         <div className="border h-[400px] w-full " style={{background:"#15191E"}}>
         <img className="h-2/3 w-full  p-3 object-contain " src={image2} alt="" />
@@ -77,7 +81,7 @@ const Projects = () => {
         
 
       </div>
-    </div>
+    </motion.div>
     </div>
 
   </section>

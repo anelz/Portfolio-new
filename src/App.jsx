@@ -5,10 +5,12 @@ import About from "./pages/About"
 import Skills from "./pages/About"
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import WelcomeModal from "./components/WelcomeModal";
 
 const  App = () => {
   return (
   <div className="h-screen w-full gap-4 flex-col ">
+    <WelcomeModal/>
     <BrowserRouter>
       <Routes>
       <Route path={ROUTES.HOME}  element ={<Home/>}/>

@@ -4,7 +4,7 @@ import DesignServicesIcon from '@mui/icons-material/DesignServices';
 
 const Services = () => {
 
-  return <section className="h-screen w-full gap-4 flex-col flex bg-black ">
+  return <section id='services' className="h-screen w-full gap-4 flex-col flex bg-black ">
     <div className="h-1/6 w-full gap-2 ">
     <div className="flex justify-center  text-2xl  text-white pt-20">SERVICES</div>
     </div>
@@ -17,7 +17,7 @@ const Services = () => {
           <LaptopIcon  fontSize='large' style={{ color:"white "}}/>
         </div>
         <h1 className='flex justify-center text-white pt-2'>Frontend</h1>
-        <p className=' pl-3 flex justify-center text-white pt-10 text-sm'>Proven ability to build complex web applications using React, Tailwind CSS, and Bootstrap. Skilled in creating custom components, implementing responsive designs, and optimizing for performance. Proficient in HTML5, CSS3, and JavaScript.</p>
+        <p className=' pl-3  flex justify-center  text-white text-sm  pt-10'>Proven ability to build complex web applications using React, Tailwind CSS, and Bootstrap. Skilled in creating custom components, implementing responsive designs, and optimizing for performance. Proficient in HTML5, CSS3, and JavaScript.</p>
       </div>
       <div className="border h-full w-full flex flex-col icon border-gray-400">
       <div className="h-1/2 w-full flex justify-center items-end text-white ">

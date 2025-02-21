@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import {motion} from "framer-motion"
 
 const Circularprogress = ({ percentage, label }) => {
   const radius = 45; 
@@ -17,7 +18,12 @@ const Circularprogress = ({ percentage, label }) => {
   const offset = circumference - (progress / 100) * circumference;
 
   return (
-    <div className="flex flex-col items-center">
+    <motion.div
+    initial={{opacity:0, }}
+    whileInView={{opacity:1}}
+    transition={{duration:4}}
+    
+    className="flex flex-col items-center">
       <svg width="160" height="160" viewBox="0 0 100 100">
         {/* Siva pozadina kruga */}
         <circle
@@ -56,7 +62,7 @@ const Circularprogress = ({ percentage, label }) => {
         </text>
       </svg>
       <p className="text-white mt-2">{label}</p>
-    </div>
+    </motion.div>
   );
 };
 

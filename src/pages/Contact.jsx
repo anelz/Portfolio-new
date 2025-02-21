@@ -4,9 +4,10 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import PlaceIcon from '@mui/icons-material/Place';
 
 
+
 const Contact = () => {
 
-  return <section className="h-screen w-full gap-5 flex-col bg-black">
+  return <section id="contact" className="h-screen w-full gap-5 flex-col bg-black">
     <div className="h-5/6 flex-col gap-5 flex  pt-44">
     <div className=" h-3/4  text-3xl text-white   ">
     <div className="h-full w-full flex justify-center items-end ">
@@ -43,7 +44,7 @@ const Contact = () => {
         ></TextField>
         </div>
         <div className="h-20 w-full flex justify-center text-white  ">
-      <Button sx={{background:"black"}} variant="contained" className="w-full ">Send Message</Button>
+      <Button  sx={{background:"black"}} variant="contained" className="w-full hover:text-gray-500 ">Send Message</Button>
         </div>
         
         </div>
