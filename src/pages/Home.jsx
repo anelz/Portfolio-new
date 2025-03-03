@@ -26,7 +26,7 @@ const handleClick = (url) => {
 
 const DownloadButton =()=> {
   const link = document.createElement("a");
-  link.href="images/Resume Anel.pdf" ;
+  link.href="images/Anel Zeric Resume.pdf" ;
   link.download="resume.pdf";
   link.click();
 }
