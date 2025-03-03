@@ -36,7 +36,7 @@ function WelcomeModal() {
       whileInView={{opacity:1, rotateX:0}}
       transition={{duration:2}}
       className="text-white text-center">
-        <h2 className="text-5xl text-gray-500 ">Welcome to my website</h2>
+        <h2 className="lg:text-5xl text-2xl text-gray-500 ">Welcome to my website</h2>
       </motion.div>
     </div>
   );

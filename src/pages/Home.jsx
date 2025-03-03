@@ -9,7 +9,10 @@ import Contact from "./Contact";
 import Other from "./Other";
 import Navlinks from "../components/Nav";
 import {Link} from "react-scroll"
-
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+import MenuIcon from '@mui/icons-material/Menu';
+import MuiDrawer from "../components/Slidemodal";
+import { useState } from "react";
 
 
 
@@ -18,6 +21,7 @@ const handleClick = (url) => {
   console.log(url);
   window.location.href = url;
 }
+
 
 
 const DownloadButton =()=> {
@@ -31,9 +35,12 @@ const DownloadButton =()=> {
 
 const Home = () => {
 
+  const [openmodal , setopenmodal] = useState("")
+
+
   return  <>
   <section id=""  className="h-screen w-full  bg-black text-white  flex  ">
-    <div  className="w-1/6 h-full border-r  border-gray-400 flex-col flex  "  >
+    <div  className=" hidden w-1/6 h-full border-r  border-gray-400 flex-col xl:flex  "  >
    <h1 className="text-white text-5xl h-1/6 w-full flex pl-20 pt-14   ">Anel</h1>
    <div className="h-1/2 w-full flex-col gap-6 pt-8" >
   <Navlinks/>
@@ -42,48 +49,51 @@ const Home = () => {
    <div className="flex  space-x-4 h-10 pl-16 text-xs  text-gray-500 hover:text-white ">Phone :
     <div > +38762837881</div>
    </div>
-   <div className="flex  h-10 space-x-4 pl-16 text-xs  text-gray-500 hover:text-white ">Email : 
-   <div > anel_z86@hotmail.com</div>
+   <div className="flex  h-10 space-x-4 pl-16  text-xs  text-gray-500 hover:text-white ">Email: 
+   <div  > anel_z86@hotmail.com</div>
    </div>
-   <div className="flex  h-10  items-center pl-16 text-xs  text-gray-500 hover:text-white">Copyright</div>
+   
   
    </div>
     </div>
     <div className="h-full flex w-full text-white ">
-      <div className="w-44 flex-col h-full ">
+      <div className="lg:w-44 lg:flex hidden flex-col h-full ">
       <div className="flex h-full w-full justify-end items-end ">
-        <div className="flex-col h-1/3 w-full gap-4">
+        <div className="flex-col h-1/3  w-full gap-4">
         <div className= "w-full flex  h-16 text-xl justify-center ">  
            <div className=" justify-center flex  bg-gray-400 " style={{width:"1px" , height:"40px "}}></div>
          
         </div>
        
-        <div className="h-12 w-full flex justify-center cursor-pointer ">
+        <div className=" lg:h-12 w-full flex justify-center cursor-pointer md:h-8">
         <InstagramIcon className=" hover:text-white text-gray-500"   fontSize="medium" ></InstagramIcon>
         </div>
-        <div className="h-12 w-full flex justify-center cursor-pointer">
+        <div className="lg:h-12 w-full flex justify-center cursor-pointer md:h-8">
         <LinkedInIcon onClick={()=> handleClick("https://www.linkedin.com/feed/")} className=" hover:text-white text-gray-500"   fontSize="medium"></LinkedInIcon>
         </div>
-        <div className="h-12 w-full flex justify-center cursor-pointer ">
+        <div className="lg:h-12 w-full flex justify-center cursor-pointer md:h-8">
         <GitHubIcon onClick={()=> handleClick("https://github.com/anelz?tab=repositories")} className=" hover:text-white text-gray-500"    fontSize="medium"></GitHubIcon>
         </div>
         </div>
       </div>
 
       </div>
-  <div className="w-1/3 h-full flex flex-col ">
-    <div className="h-full w-full flex flex-col text-white gap-4 items-center justify-center  "> 
-      <h1 className="text-5xl w-full flex justify-end pr-20 ">Anel Žerić</h1> 
-      <div className="text-2xl w-full flex justify-end pr-2">Fronted Developer-React.js</div> 
-      <div className="flex justify-end pr-28  w-full ">
-        <div onClick={DownloadButton} className="flex border-lg border h-10 w-32 justify-center items-center rounded-xl cursor-pointer  text-gray-500 hover:text-white border-gray-500">Download Cv</div>
+  <div className="lg:w-1/3 h-full flex flex-col  w-1/3">
+    <div className="h-full w-full flex flex-col text-white gap-4 items-center justify-center p-2 lg:p-0 "> 
+      <h1 className="lg:text-4xl w-full flex lg:justify-end   lg:pr-20   pr-4 md:text-3xl xl:text-5xl text-xl ">Anel Žerić</h1> 
+      <div className="lg:text-xl w-full flex justify-end pr-2  xl:text-2xl text-md ">Fronted Developer-React.js</div> 
+      <div className="flex justify-end  lg:pr-28  w-full  ">
+        <div onClick={DownloadButton} className="flex border-lg border lg:h-10  lg:w-32 h-12 w-36 text-sm  justify-center items-center rounded-xl cursor-pointer  text-gray-500 hover:text-white border-gray-500">Download CV</div>
       </div>
     </div>
   </div>
 
-      <div className="w-2/3 h-screen  ">
+      <div className="lg:w-2/3 h-screen w-5/6  ">
+      <div className="w-full h-12 lg:hidden justify-end flex text-white items-end pr-4 ">
+      <MenuIcon onClick={()=> setopenmodal(true)} fontSize="large"/>
+      </div>
       <div className="h-full w-full flex  items-center">
-      <img className="h-5/6 pt-12 p-10  brightness-75" src={img1} alt="" srcset="" />
+      <img className="lg:h-5/6 lg:pt-12  lg:p-10  brightness-75 h-2/5 object-cover " src={img1} alt="" srcset="" />
       </div>
       
       </div>
@@ -94,17 +104,20 @@ const Home = () => {
       spy={true} 
       smooth={true} 
       offset={10} 
-       className="animate-pulse cursor-pointer "
+       className="animate-pulse cursor-pointer hidden xl:flex"
       duration={600} >  Scroll down
   </Link>
     
         <div clasname= "flex w-full">
-          <div className="flex pl-4 animate-pulse">V</div>
+          <div className=" pl-4 animate-pulse hidden xl:flex">
+            <KeyboardDoubleArrowDownIcon fontSize="small"/>
+
+          </div>
           </div>
         
       </div>
     </div>
-   
+    <MuiDrawer open={openmodal} close={()=> setopenmodal(false)}/>
   </section>
   <About/>
   <Services/>

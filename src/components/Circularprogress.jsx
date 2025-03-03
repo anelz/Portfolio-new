@@ -21,10 +21,11 @@ const Circularprogress = ({ percentage, label }) => {
     <motion.div
     initial={{opacity:0, }}
     whileInView={{opacity:1}}
-    transition={{duration:4}}
+    transition={{duration:3}}
     
-    className="flex flex-col items-center">
-      <svg width="160" height="160" viewBox="0 0 100 100">
+    className="lg:flex flex-col items-center hidden">
+      <svg width="160" height="160" viewBox="0 0 100 100" >
+      
         {/* Siva pozadina kruga */}
         <circle
           cx="50"
