@@ -16,7 +16,7 @@ const About = () => {
     <div className="lg:pt-4 flex justify-center pt-6">ABOUT ME</div>
     <div
      
-       className=" pt-10 flex justify-center lg:text-xl font-bold text-lg ">1.5 years of experience building the Web</div>
+       className=" pt-10 flex justify-center lg:text-xl font-bold text-lg ">2  years of experience building the Web</div>
     </div>
     <div className="h-1/6 w-full text-white lg:justify-center flex ">
     <div
